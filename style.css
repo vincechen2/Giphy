@@ -9,6 +9,15 @@ body {
   background: rgb(24, 23, 23);
 }
 
+input[type="text"] {
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 0px 1px 2px black;
+}
 .wrapper {
   width: 75%;
   margin: 0 auto;
@@ -20,6 +29,29 @@ body {
   overflow: hidden;
 }
 .center {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+input {
+  background-color: white;
+  color: black;
+
+  border-radius: 8px;
+}
+button {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+.formE {
+  margin: 0 30px;
+}
+.centerbutton {
+  padding: 30px;
   display: flex;
   justify-content: center;
 }

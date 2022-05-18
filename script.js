@@ -1,12 +1,19 @@
 const api_key = "65QOHB4E2SqaMchKakxio935KRLud7Pl";
 const limit = 9;
 let offset = 0;
-
+let search = "Trending";
 let searchbar = document.getElementById("search");
 let form = document.getElementById("form");
 let load = document.getElementById("load");
+let trending = document.getElementById("trending");
+trending.addEventListener("click", () => {
+  offset = 0;
+  search = "Trending";
+  populate();
+});
 load.addEventListener("click", populate);
 form.addEventListener("submit", () => {
+  offset = 0;
   search = searchbar.value;
 
   let container = document.getElementById("gif-list");
@@ -19,14 +26,21 @@ form.addEventListener("submit", () => {
 });
 
 window.onload = () => {
-    
+  populate();
 };
 
 async function getData() {
-  let d = await fetch(
-    "http://api.giphy.com/v1/gifs/search?api_key=" + api_key + "&q=" + search
-  );
-  return await d.json();
+  if (search === "Trending") {
+    let d = await fetch(
+      "http://api.giphy.com/v1/gifs/trending?api_key=" + api_key
+    );
+    return await d.json();
+  } else {
+    let d = await fetch(
+      "http://api.giphy.com/v1/gifs/search?api_key=" + api_key + "&q=" + search
+    );
+    return await d.json();
+  }
 }
 
 async function populate() {
