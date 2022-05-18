@@ -11,7 +11,7 @@
 
 #### STRETCH FEATURES
 
-- [] Explore additional properties of the Gif Object
-- [] Incorporate various buttons that use a different API endpoint.
-- [] Improve CSS styles with Bootstrap framework
-- [] Incorporate :hover styling and DOM
+- [x] Explore additional properties of the Gif Object
+- [x] Incorporate various buttons that use a different API endpoint.
+- [x] Improve CSS styles with Bootstrap framework
+- [x] Incorporate :hover styling and DOM
